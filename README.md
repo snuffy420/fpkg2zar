@@ -45,7 +45,7 @@ macOS and Linux run from source; see [macOS](#macos) and [Linux](#linux) below.
 - Optional **verification** re-reads every file from the finished archive and checks its SHA-1 against the package, plus the archive's built-in SHA-256.
 - Batch queue, drag and drop, live progress, speed, time left and free space at the output.
 - A full **Log** tab that lists every file as it goes into the archive.
-- Temporary **AstroHybrid fix**: one tick applies the community workaround for AstroHybrid's `.zar` loading bug (its issue #272). It will be removed once AstroHybrid fixes it.
+- Temporary **AstroHybrid fix**: one tick applies the community workaround for AstroHybrid's `.zar` loading bug (its issue #272). It will be removed once AstroHybrid fixes it. Tick the box and it will ask you for your AstroHybrid.exe file to find and locate the needed files to replace.
 
 ![The Log tab lists every file as it is archived (made-up example game)](assets/screenshots/log.png)
 
