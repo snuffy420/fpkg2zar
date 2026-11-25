@@ -1,0 +1,2 @@
+PyQt6>=6.5
+zstandard>=0.22

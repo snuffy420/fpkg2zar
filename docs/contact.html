@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact · fPKG2Zar</title>
+  <meta name="description" content="Contact the developer of fPKG2Zar, the PS5 fPKG to .zar converter." />
+  <link rel="icon" href="../assets/icon.png" />
+  <style>
+    :root {
+      --bg-top: #0d2147;
+      --bg-mid: #07122a;
+      --bg-bottom: #04070f;
+      --panel: #0f1b33;
+      --panel-deep: #0a1427;
+      --edge: #24406e;
+      --blue: #0070d1;
+      --light: #4da3ff;
+      --text: #eef3fb;
+      --dim: #8fa2c0;
+      --field: #07101f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+      background: radial-gradient(ellipse at 10% 0%, rgba(0, 112, 209, .22), transparent 50%),
+                  linear-gradient(160deg, var(--bg-top) 0%, var(--bg-mid) 45%, var(--bg-bottom) 100%);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 20px;
+      border-bottom: 1px solid var(--edge);
+      background: rgba(4, 7, 15, .6);
+    }
+    header img { width: 40px; height: 40px; }
+    header .title { line-height: 1.1; font-weight: 700; font-size: 1.15rem; }
+    header .title b { color: var(--light); }
+    header .title span { display: block; font-size: 0.8rem; font-weight: 400; color: var(--dim); }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 16px 40px;
+    }
+    .card {
+      width: 100%;
+      max-width: 540px;
+      background: linear-gradient(180deg, var(--panel) 0%, var(--panel-deep) 100%);
+      border: 1px solid var(--edge);
+      border-radius: 18px;
+      padding: 26px 26px 22px;
+      box-shadow: 0 0 0 1px rgba(77, 163, 255, .08), 0 20px 50px rgba(0, 0, 0, .5);
+    }
+    h1 { margin: 0; font-size: 1.8rem; }
+    .sub { color: var(--dim); font-size: 0.95rem; margin: 6px 0 18px; }
+    label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--light); margin: 14px 0 6px; }
+    input, select, textarea {
+      width: 100%;
+      background: var(--field);
+      border: 1px solid var(--edge);
+      border-radius: 10px;
+      color: var(--text);
+      padding: 11px 13px;
+      font: inherit;
+      outline: none;
+    }
+    input::placeholder, textarea::placeholder { color: #5f6f8c; }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--light);
+      box-shadow: 0 0 0 3px rgba(77, 163, 255, .20);
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    button {
+      margin-top: 22px;
+      width: 100%;
+      border: none;
+      border-radius: 999px;
+      padding: 13px;
+      font: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      color: #ffffff;
+      background: var(--blue);
+      box-shadow: 0 0 16px rgba(0, 112, 209, .35);
+    }
+    button:hover, button:focus-visible { background: #1a88ef; outline: 2px solid #ffffff; outline-offset: 2px; }
+    button:disabled { opacity: 0.6; cursor: wait; }
+    .note { margin-top: 16px; font-size: 0.8rem; color: var(--dim); line-height: 1.45; }
+    .ok, .err { display: none; margin-top: 14px; padding: 12px; border-radius: 10px; font-size: 0.9rem; }
+    .ok { background: rgba(95, 211, 165, .10); color: #5fd3a5; border: 1px solid rgba(95, 211, 165, .45); }
+    .err { background: rgba(255, 80, 80, .12); color: #ff9a9a; border: 1px solid rgba(255, 80, 80, .45); }
+    a { color: var(--light); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../assets/icon.png" alt="" width="40" height="40" />
+    <div class="title">fPKG<b>2</b>Zar<span>PS5 fPKG to .zar, without extracting</span></div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>Contact</h1>
+      <p class="sub">Bug reports, packages that won't convert, archives that won't load, and feature requests for fPKG2Zar.</p>
+
+      <!-- Messages go through Formspree to the developer's verified email, which is never shown on this page. -->
+      <form id="contactForm" action="https://formspree.io/f/myeekrpy" method="POST">
+        <input type="hidden" name="_subject" value="fPKG2Zar contact" />
+        <input type="hidden" name="app" value="fPKG2Zar 0.1.9" />
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
+
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required maxlength="120" placeholder="Your name" />
+
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" required maxlength="200" placeholder="you@example.com" />
+
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option value="bug">Bug report</option>
+          <option value="convert">A package that won't convert</option>
+          <option value="load">An archive that won't load</option>
+          <option value="feature">Feature request</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="os">Windows / macOS / Linux version <span style="color:var(--dim);font-weight:400">(optional)</span></label>
+        <input id="os" name="os_version" type="text" maxlength="120" placeholder="e.g. Windows 11 24H2, macOS 15, Ubuntu 24.04" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required maxlength="5000" placeholder="What happened, or what would you like to see? For a conversion problem, the last lines of the Log tab help."></textarea>
+
+        <button type="submit" id="submitBtn">SEND MESSAGE</button>
+      </form>
+
+      <div class="ok" id="ok" role="status">Thanks! Your message was sent.</div>
+      <div class="err" id="err" role="alert">Something went wrong sending your message. Please try again later.</div>
+
+      <p class="note">
+        Please don't send packages, keys, game files or download links.
+        No personal email address is published here. Sent with
+        <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a>.
+        <br /><a href="https://github.com/snuffy420/fpkg2zar">Back to the project on GitHub</a>
+      </p>
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const ok = document.getElementById('ok');
+    const err = document.getElementById('err');
+    const btn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      ok.style.display = 'none';
+      err.style.display = 'none';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          ok.style.display = 'block';
+        } else {
+          err.style.display = 'block';
+        }
+      } catch (x) {
+        err.style.display = 'block';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
